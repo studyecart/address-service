@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/address")
+@RequestMapping("/api/address-service")
 public class AddressController {
     @Autowired
     AddressService addressService;
@@ -17,11 +17,9 @@ public class AddressController {
     return addressService.createAddress(createAddressRequest);
 }
 
-<<<<<<< HEAD
-@GetMapping("/getById/{id}")
-=======
+
 @GetMapping("/getByid/{id}")
->>>>>>> 806fd78 (new address service added)
+
     public AddressResponse getById(@PathVariable long id){
 
     return addressService.getById(id);
